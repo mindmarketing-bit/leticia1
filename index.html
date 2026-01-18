@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F6EFE8">
 <title>Letícia Beauty Studio</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -30,6 +34,7 @@ body{
     opacity:0;
     transform:translateY(40px);
     transition:1s ease;
+    will-change:opacity,transform;
 }
 .reveal.active{
     opacity:1;
@@ -48,7 +53,9 @@ header{
     justify-content:space-between;
 }
 .nav img{
-    width:120px;
+    width:160px;
+    height:auto;
+    max-width:100%;
 }
 
 .hero{
@@ -125,6 +132,7 @@ section{
     overflow:hidden;
     box-shadow:0 20px 40px rgba(0,0,0,.08);
     transition:.4s;
+    contain:content;
 }
 .card:hover{
     transform:translateY(-10px);
@@ -209,7 +217,7 @@ section{
 
 <header class="reveal">
     <div class="nav">
-        <img src="img/logo.PNG">
+        <img src="img/logo.PNG" alt="Letícia Beauty Studio">
         <a class="btn" href="https://wa.me/5581998015157"><i class="fab fa-whatsapp"></i> Agendar</a>
     </div>
 
@@ -223,8 +231,8 @@ section{
         </div>
 
         <div class="hero-images">
-            <img src="img/cilios.jpg">
-            <img src="img/unhas.jpg" class="img2">
+            <img src="img/cilios.jpg" alt="Cílios" loading="lazy" width="500" height="600">
+            <img src="img/unhas.jpg" alt="Unhas em Gel" class="img2" loading="lazy" width="275" height="330">
         </div>
     </div>
 </header>
@@ -234,17 +242,17 @@ section{
 
     <div class="cards">
         <div class="card">
-            <img src="img/cilios.jpg">
+            <img src="img/cilios.jpg" alt="Cílios" loading="lazy" width="400" height="220">
             <div><h3>Cílios</h3><p>Alongamento com acabamento natural.</p></div>
         </div>
 
         <div class="card">
-            <img src="img/sobrancelha.PNG">
+            <img src="img/sobrancelha.PNG" alt="Sobrancelhas" loading="lazy" width="400" height="220">
             <div><h3>Sobrancelhas</h3><p>Design personalizado e harmônico.</p></div>
         </div>
 
         <div class="card">
-            <img src="img/unhas.jpg">
+            <img src="img/unhas.jpg" alt="Unhas em Gel" loading="lazy" width="400" height="220">
             <div><h3>Unhas em Gel</h3><p>Beleza e durabilidade impecáveis.</p></div>
         </div>
     </div>
